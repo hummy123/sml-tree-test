@@ -122,15 +122,7 @@ structure BTree = struct
     | Max (l, m, r) =>
         Node (#[m], #[l, r])
 
-  fun insMany (tree) =
-  let
-    val tree = ref tree
-    for ctr = 0 to 1000 do 
-      tree := append (tree, ctr)
-    done
-  in
-    tree
-  end
+  fun insMany (ctr: int, tree) =
     if ctr = 1000 then tree
     else
       let
