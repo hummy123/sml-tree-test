@@ -1,0 +1,7 @@
+$(SML_LIB)/basis/basis.mlb
+
+ann
+  "allowVectorExps true"
+in
+  b_tree.sml
+end
